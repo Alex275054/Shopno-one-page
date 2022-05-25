@@ -281,7 +281,7 @@ html {
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 45px;
+  font-size: calc(28px + 17 * (100vw / 1920));
   font-family: "Montserrat", sans-serif;
   line-height: 2;
   margin: 0 0 143px 0;
@@ -295,12 +295,19 @@ html {
   width: 230px;
   height: 50px;
   text-transform: uppercase;
-  border: 2px solid #777879;
+  border: 2px solid #3c3c3d;
   cursor: pointer;
-  background-color: #fff;
   background: transparent;
   font-family: "Montserrat", sans-serif;
   font-weight: 510;
+}
+#home .home__btn:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+  border: 2px solid #a2dcd9;
+  color: #a2dcd9;
 }
 #home .home__btn a {
   color: #3c3c3d;
@@ -404,12 +411,12 @@ html {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 20px;
-  font-family: "Merriweather", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 #about .about__text {
   font-size: 16px;
-  font-family: "Merriweather", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 #about .about__text:not(:last-child) {
@@ -554,8 +561,8 @@ html {
 }
 #services .services__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 472px;
-          flex: 0 0 472px;
+      -ms-flex: 0 1 472px;
+          flex: 0 1 472px;
   opacity: 1;
   margin: 0 15px 15px 0;
   background-color: #000;
@@ -563,8 +570,8 @@ html {
 }
 #services .services__item_big {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 650px;
-          flex: 0 0 650px;
+      -ms-flex: 0 1 650px;
+          flex: 0 1 650px;
   background-color: #000;
 }
 #services .services__item_margin-off {
@@ -624,6 +631,7 @@ html {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
+  text-decoration: none;
 }
 #services .services__item-action::after {
   padding: 0 0 0 20px;
@@ -707,8 +715,8 @@ html {
   display: flex;
   margin: 0 15px 15px 0;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 365px;
-          flex: 0 0 365px;
+      -ms-flex: 0 1 365px;
+          flex: 0 1 365px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -935,11 +943,9 @@ html {
     /* Стрелка вправо */
   }
   #team .slick-arrow.slick-prev {
-    left: -30px;
     background: url("../img/bal.svg") 0 0/100% no-repeat;
   }
   #team .slick-arrow.slick-next {
-    right: -30px;
     background: url("../img/bar.svg") 0 0/100% no-repeat;
   }
 }
@@ -962,8 +968,8 @@ html {
   /* Стрелка вправо */
   /* Стрелка не активная */
   /* Точки (булиты) */
-  /* Активная точка */
   /* Элемент точки */
+  /* Активная точка */
 }
 #reviews .reviews__container {
   padding: 120px 15px;
@@ -979,8 +985,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 666px;
-          flex: 0 0 666px;
+      -ms-flex: 0 1 666px;
+          flex: 0 1 666px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1020,9 +1026,6 @@ html {
   padding: 0 50px;
 }
 #reviews .wps .slick-list {
-  margin: 0 auto;
-}
-#reviews .wps .slick-list {
   overflow: hidden;
   max-width: 440px;
 }
@@ -1032,7 +1035,7 @@ html {
   display: flex;
   margin-bottom: 75px;
 }
-#reviews .wps .wps__photo {
+#reviews .wps .slick-slide {
   margin: 0 auto;
 }
 #reviews .wps .slick-arrow {
@@ -1075,35 +1078,32 @@ html {
   border-radius: 35%;
   border: 0;
 }
+#reviews .wts {
+  background-color: #eaebed;
+  padding: 80px;
+}
+#reviews .wts__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 33px;
+}
+#reviews .wts__sub-title {
+  font-size: 15px;
+  font-weight: 100;
+}
+#reviews .wts__text {
+  margin-bottom: 15px;
+}
 #reviews .reviews__text-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 666px;
-          flex: 0 0 666px;
+      -ms-flex: 0 1 666px;
+          flex: 0 1 666px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-#reviews .wts {
-  background-color: #eaebed;
-}
-#reviews .wts .wts__title {
-  font-size: 20px;
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-family: "Montserrat", sans-serif;
-}
-#reviews .wts .wts__sub-title {
-  font-weight: bold;
-  color: #858585;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-}
-#reviews .wts .wts__text {
-  margin-bottom: 32px;
 }
 #reviews .slick-slider {
   position: relative;
@@ -1132,7 +1132,7 @@ html {
   width: 55px;
   height: 50px;
   position: relative;
-  top: 500px;
+  top: 470px;
   left: 190px;
   border: 0;
   cursor: pointer;
@@ -1165,12 +1165,18 @@ html {
   bottom: 150px;
 }
 @media (max-width: 1300px) {
+  #reviews {
+    /* Стрелка влево */
+  }
   #reviews .slick-slider {
     text-align: center;
   }
   #reviews .reviews__content {
     display: block;
     text-align: center;
+  }
+  #reviews .slick-list {
+    margin: 0 auto;
   }
   #reviews .wps__photo {
     display: -webkit-box;
@@ -1191,6 +1197,9 @@ html {
     display: block;
     margin-bottom: 50px;
   }
+  #reviews .slick-arrow.slick-prev {
+    top: 490px;
+  }
 }
 @media (max-width: 992px) {
   #reviews .wps {
@@ -1201,6 +1210,59 @@ html {
   }
   #reviews .wts {
     display: block;
+  }
+}
+@media (max-width: 500px) {
+  #reviews {
+    /* Точки (булиты) */
+    /* Стрелка */
+    /* Стрелка влево */
+    /* Стрелка вправо */
+  }
+  #reviews .wts {
+    background-color: #eaebed;
+    padding: 50px;
+    height: 250%;
+  }
+  #reviews .slick-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 400px;
+            flex: 0 1 400px;
+  }
+  #reviews .reviews__content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 120px 15px;
+  }
+  #reviews .reviews__text-items {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 566px;
+            flex: 0 1 566px;
+  }
+  #reviews .reviews__text-slider {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 566px;
+            flex: 0 1 566px;
+    max-width: 500px;
+  }
+  #reviews .slick-dots {
+    padding-top: 50px;
+  }
+  #reviews .slick-arrow.slick-prev {
+    top: 470px;
+    left: 90px;
+  }
+  #reviews .slick-arrow.slick-next {
+    top: 30px;
+    left: 155px;
+  }
+  #reviews .reviews__container {
+    padding: 120px 15px 0px;
+    margin: 0 auto;
   }
 }
 
@@ -1221,13 +1283,13 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 120px 15px 125px;
+  padding: 0 15px 125px;
 }
 #contact .contact__inputs {
   background-color: #495862;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 610px;
-          flex: 0 0 610px;
+      -ms-flex: 0 1 610px;
+          flex: 0 1 610px;
   padding: 35px;
   margin-right: 25px;
 }
@@ -1279,7 +1341,21 @@ html {
   padding: 15px;
 }
 #contact .contact__button {
-  width: 245px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 300px;
+          flex: 0 1 300px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 20px;
   height: 52px;
   text-transform: uppercase;
   border-radius: 3px;
@@ -1290,15 +1366,18 @@ html {
   color: #214744;
   float: left;
   outline: none;
-  font-weight: 410;
   font-family: "Montserrat", sans-serif;
+}
+#contact .contact__button:hover {
+  background-color: #119a8e;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
 }
 #contact .contact__map {
   background-color: #495862;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 500px;
-          flex: 0 0 500px;
-  padding: 33px;
+      -ms-flex: 0 1 610px;
+          flex: 0 1 610px;
   text-align: left;
   color: #c8cdd0;
   padding: 25px;
@@ -1309,6 +1388,15 @@ html {
 }
 #contact .cpl {
   margin-bottom: 25px;
+}
+#contact .contact__map-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 462px;
+          flex: 0 1 462px;
+  width: 100%;
 }
 @media (max-width: 1024px) {
   #contact .contact__container {
@@ -1322,11 +1410,7 @@ html {
             justify-content: center;
   }
   #contact .contact__inputs {
-    max-width: 500px;
     margin: 0 0 20px 0;
-  }
-  #contact .contact__map-map {
-    display: block;
   }
 }
 
