@@ -19,10 +19,6 @@ body {
   height: 100%;
 }
 
-html.lock{
-  overflow: hidden;
-}
-
 .body._active {
   overflow: hidden;
 }
@@ -76,6 +72,7 @@ html {
 .title {
   font-size: 38px;
   font-weight: bold;
+  line-height: 1.5;
   margin-bottom: 17px;
   text-transform: uppercase;
   font-weight: 700;
@@ -122,11 +119,11 @@ html {
   line-height: 90px;
   padding: 0 10px;
   font-weight: 700;
-}
-.header .header__list li:hover {
-  background-color: #a2dcd9;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+.header .header__list li:hover {
+  color: #a2dcd9;
 }
 .header .header__burger {
   display: none;
@@ -267,6 +264,9 @@ html {
     margin: 0 0 0 0;
     font-size: 26px;
   }
+  .header .header__list li:hover {
+    color: rgb(97, 80, 80);
+  }
 }
 
 .main {
@@ -277,7 +277,12 @@ html {
 
 #home {
   background-color: #eff0f2;
-  padding: 300px 0 0 0;
+  padding: 300px 0 100px 0;
+}
+@media (max-width: 768px) {
+  #home {
+    padding: 200px 0 40px 0;
+  }
 }
 #home .header__link {
   color: #000;
@@ -316,8 +321,6 @@ html {
 #home .home__btn:hover {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-transform: translateY(-15px);
-          transform: translateY(-15px);
   border: 2px solid #a2dcd9;
   color: #a2dcd9;
 }
@@ -965,6 +968,7 @@ html {
 #reviews {
   background-color: #f9fbfb;
   text-align: center;
+  /* Буллеты */
   /* Слайдер */
   /* Слайдер запущен */
   /* Слайдер с точками */
@@ -978,8 +982,6 @@ html {
   /* Стрелка */
   /* Стрелка влево */
   /* Стрелка вправо */
-  /* Стрелка не активная */
-  /* Точки (булиты) */
   /* Элемент точки */
   /* Активная точка */
 }
@@ -992,6 +994,9 @@ html {
   display: -ms-flexbox;
   display: flex;
 }
+#reviews .reviews__photo-slider {
+  text-align: center;
+}
 #reviews .wps__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1003,96 +1008,32 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
 }
-#reviews .wps {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 470px;
-          flex: 0 0 470px;
-  /* Слайдер */
-  /* Слайдер запущен */
-  /* Слайдер с точками */
-  /* Ограничивающая оболочка */
-  /* Лента слайдов */
-  /* Слайд */
-  /* Слайд активный (показывается) */
-  /* Слайд основной */
-  /* Слайд по центру */
-  /* Клонированный слайд */
-  /* Стрелка */
-  /* Стрелка влево */
-  /* Стрелка вправо */
-  /* Стрелка не активная */
-  /* Точки (булиты) */
-  /* Активная точка */
-  /* Элемент точки */
-}
-#reviews .wps .reviews__photo-slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#reviews .wps-slider {
+  overflow: hidden;
+  padding: 30px 0 70px 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-#reviews .wps .slick-slider {
-  position: relative;
-  padding: 0 50px;
+#reviews .swiper-wrapper {
+  margin-bottom: 70px;
 }
-#reviews .wps .slick-list {
-  overflow: hidden;
-  max-width: 440px;
+#reviews .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #82b6b3;
 }
-#reviews .wps .slick-track {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 75px;
-}
-#reviews .wps .slick-slide {
-  margin: 0 auto;
-}
-#reviews .wps .slick-arrow {
-  position: absolute;
-  top: 50px;
-  z-index: 10;
-  font-size: 0;
-  width: 30px;
-  height: 60px;
-  border: 0;
-}
-#reviews .wps .slick-arrow.slick-prev {
-  left: 0;
-  background: url("../img/bal.svg") 0 0/100% no-repeat;
-}
-#reviews .wps .slick-arrow.slick-next {
-  right: 0;
-  background: url("../img/bar.svg") 0 0/100% no-repeat;
-}
-#reviews .wps .slick-dots {
-  position: relative;
-  bottom: 50px;
-}
-#reviews .wps .slick-dots li {
-  list-style: none;
-  margin: 0 10px;
-}
-#reviews .wps .slick-dots li.slick-active button {
-  background-color: #71f6eb;
-}
-#reviews .wps .slick-dots li button {
-  width: 10px;
-  height: 10px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0 auto;
-  font-size: 0;
-  background-color: #d0d0d0;
-  border-radius: 35%;
-  border: 0;
+#reviews .swiper-pagination-bullet:active {
+  background-color: #5e7e7c;
 }
 #reviews .wts {
   background-color: #eaebed;
   padding: 80px;
+}
+#reviews .wts__items {
+  top: -40px;
 }
 #reviews .wts__title {
   font-size: 20px;
@@ -1197,6 +1138,7 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0 auto;
   }
   #reviews .wts {
     padding: 90px 80px;
@@ -1226,10 +1168,20 @@ html {
 }
 @media (max-width: 500px) {
   #reviews {
+    /* Стрелка */
     /* Точки (булиты) */
     /* Стрелка */
     /* Стрелка влево */
     /* Стрелка вправо */
+  }
+  #reviews .slick-arrow {
+    position: absolute;
+    top: 50px;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 60px;
+    border: 0;
   }
   #reviews .wts {
     background-color: #eaebed;
